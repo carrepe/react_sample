@@ -7,9 +7,14 @@ export default function A001() {
 
   useEffect(() => {
     // api URL 내부에 numOfRows를 넣어서 요청
+    // 예술의전당_종합 공연정보(전체 장르) API
+    // https://www.culture.go.kr/data/openapi/openapiView.do?id=570
+    // 개별 인증키 (Encoding) - 0f2e0f00-9bc3-483a-9ef2-4f81d6d89ec3
+    const serviceKey = '0f2e0f00-9bc3-483a-9ef2-4f81d6d89ec3';
+
     axios
       .get(
-        `http://api.kcisa.kr/openapi/API_CCA_142/request?serviceKey=0f2e0f00-9bc3-483a-9ef2-4f81d6d89ec3&numOfRows=${numOfRows}&pageNo=1&infoTp=026`
+        `http://api.kcisa.kr/openapi/API_CCA_142/request?serviceKey=${serviceKey}&numOfRows=${numOfRows}&pageNo=1&infoTp=026`
       )
       .then((res) => {
         setData(res.data.response.body.items.item);

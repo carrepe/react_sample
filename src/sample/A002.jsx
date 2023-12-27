@@ -29,6 +29,10 @@ export default function A002() {
   }, []);
   return (
     <div className="box">
+      <p>
+        카카오 지도 활용하기 -
+        <a href="https://apis.map.kakao.com/"> Maps API</a>
+      </p>
       <div ref={mapRef} className="map">
         지도 지도
       </div>
