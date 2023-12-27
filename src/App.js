@@ -9,6 +9,7 @@ import A007 from './sample/A007';
 import A008 from './sample/A008';
 import A009 from './sample/A009';
 import A010 from './sample/A010';
+import A011 from './sample/A011';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <a href="/A010">
           A010 - axios 활용하여 api 자료 불러오기 - 영화정보 API
         </a>
+        <a href="/A011">A011 - 날자활용 </a>
       </nav>
       <Routes>
         <Route path="/" element={<></>} />
@@ -43,6 +45,7 @@ function App() {
         <Route path="/A008" element={<A008 />} />
         <Route path="/A009" element={<A009 />} />
         <Route path="/A010" element={<A010 />} />
+        <Route path="/A011" element={<A011 />} />
       </Routes>
     </div>
   );
