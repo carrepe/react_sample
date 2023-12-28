@@ -10,12 +10,15 @@ import A008 from './sample/A008';
 import A009 from './sample/A009';
 import A010 from './sample/A010';
 import A011 from './sample/A011';
+import A012 from './sample/A012';
 
 function App() {
   return (
     <div className="App">
       <nav className="nav">
-        <a href="/A001">A001 - axios 활용하여 api 자료 불러오기 </a>
+        <a href="/A001">
+          A001 - axios 활용하여 api 자료 불러오기 - 예술의 전당 공연정보 API
+        </a>
         <a href="/A002">A002_1 - 카카오지도 활용하기</a>
         <a href="/A005">A005 - 카카오지도에 마커 표시하기</a>
         <a href="/A003">A003 - useRef 사용법</a>
@@ -33,6 +36,7 @@ function App() {
           A010 - axios 활용하여 api 자료 불러오기 - 영화정보 API
         </a>
         <a href="/A011">A011 - 날자활용 </a>
+        <a href="/A012">A012 - 올림픽공원도서정보 API</a>
       </nav>
       <Routes>
         <Route path="/" element={<></>} />
@@ -46,6 +50,7 @@ function App() {
         <Route path="/A009" element={<A009 />} />
         <Route path="/A010" element={<A010 />} />
         <Route path="/A011" element={<A011 />} />
+        <Route path="/A012" element={<A012 />} />
       </Routes>
     </div>
   );
