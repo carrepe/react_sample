@@ -16,7 +16,7 @@ export default function A012() {
     try {
       const response = await axios.get(url);
       setData(response.data.response.body.items.item);
-      // console.log(response.data.response.body.items.item);
+      console.log(response.data.response.body.items.item);
     } catch (error) {
       console.error('Error fetching data', error);
     }
@@ -24,20 +24,21 @@ export default function A012() {
 
   useEffect(() => {
     fetchData();
-  }, [numOfRows]);
+  }, [numOfRows, pageNo]); // pageNo를 의존성 배열에 추가
 
   return (
     <div className="box">
       <h1>도서정보</h1>
-      {data.map((list, i) => (
-        <div key={i}>
-          <p>{list.localId}</p>
-          <p>{list.title}</p>
-          <p>{list.rights}</p>
-          <p>{list.subDescription}</p>
-          <hr />
-        </div>
-      ))}
+      {data &&
+        data.map((list, i) => (
+          <div key={i}>
+            <p>{list.localId}</p>
+            <p>{list.title}</p>
+            <p>{list.rights}</p>
+            <p>{list.subDescription}</p>
+            <hr />
+          </div>
+        ))}
     </div>
   );
 }
